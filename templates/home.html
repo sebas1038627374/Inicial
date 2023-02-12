@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Inicio</title>
+    <style>
+      /* Estilos para la página */
+      body {
+          font-family: sans-serif;
+          background-color: lightgreen;
+      }
+  
+      h1 {
+          text-align: center;
+      }
+  
+      .cita {
+          font-style: italic;
+          font-size: 20px;
+          color: black;
+          text-align: center;
+      }
+  
+      .boton-inicio {
+          background-color: red;
+          color: black;
+          padding: 15px 32px;
+          text-align: center;
+          display: inline-block;
+          font-size: 16px;
+          border-radius: 25px;
+          transition: background-color 0.3s ease;
+          font-family: cursive;
+          text-decoration: none;
+      }
+  
+      .boton-inicio:hover {
+          background-color: darkblue;
+          color: white
+      }
+
+      .boton-home {
+        background-color: darkblue;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 25px;
+        transition: background-color 0.3s ease;
+        font-family: cursive;
+        text-decoration: none;
+    }
+
+    .boton-home:hover {
+      background-color: darkblue;
+      color: black
+  }
+  
+      .boton-secundario {
+          background-color: blue;
+          color: black;
+          padding: 10px 20px;
+          text-align: center;
+          display: none;
+          font-size: 14px;
+          margin: 10px;
+          border-radius: 15px;
+          transition: background-color 0.3s ease;
+          font-family: cursive;
+          text-decoration: none;
+      }
+  
+      .boton-secundario:hover {
+          background-color: darkblue;
+          color: white
+      }
+  </style>
+    <script>
+      function mostrarOpciones() {
+        var botones = document.querySelectorAll(".boton-secundario");
+        var algunBotonVisible = false;
+
+        for (var i = 0; i < botones.length; i++) {
+            if (botones[i].style.display === "inline-block") {
+                algunBotonVisible = true;
+                break;
+            }
+        }
+
+        for (var i = 0; i < botones.length; i++) {
+            botones[i].style.display = algunBotonVisible ? "none" : "inline-block";
+        }
+    }
+    </script>
+</head>
+<body>
+    <h1>Bienvenido</h1>
+     
+    <p style="text-align: left;">
+      <a href="/" class="boton-home">Home</a>
+  </p>
+    <p class="cita">"La poesía es un juego de palabras para decir cosas difíciles." - Paul Éluard</p>
+
+    <p style="text-align: center;">
+        <a href="#" class="boton-inicio" onclick="mostrarOpciones()">Iniciar</a>
+    </p>
+
+    <p style="text-align: center;">
+      <a href="/page1" class="boton-secundario">Opción 1</a>
+      <a href="/page2" class="boton-secundario">Opción 2</a>
+    </p>
+
+
+    
+</body>
+</html>
